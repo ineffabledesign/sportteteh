@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Routine</title>
+    <style>
+        :root {
+            --bg: #F9F9F9;
+            --surface: #FFFFFF;
+            --text: #111111;
+            --accent: #000000;
+            --gray: #888888;
+            --light-gray: #EFEFEF;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            padding-bottom: 80px;
+        }
+        header {
+            background-color: var(--surface);
+            padding: 24px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            font-size: 13px;
+            color: var(--gray);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+        .container {
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gray);
+            margin: 32px 0 16px;
+            font-weight: 700;
+        }
+        .card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+        .title-area h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 6px 0;
+        }
+        .title-area p {
+            font-size: 13px;
+            color: var(--gray);
+            margin: 0 0 16px 0;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            background: var(--light-gray);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: none;
+        }
+        .instructions {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--bg);
+            padding: 14px 16px;
+            border-radius: 12px;
+            transition: opacity 0.2s;
+        }
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--accent);
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .checkbox-wrapper label {
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+        }
+        .checked {
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Daily Routine</h1>
+        <div class="subtitle">Full Body & Knee Safe • 29 y/o Plan</div>
+    </header>
+
+    <div class="container">
+        
+        <div class="section-title">Tahap 1: Pemanasan (5 Menit)</div>
+        
+        <div class="card">
+            <div class="title-area">
+                <h2>5 Min Full Body Warm Up</h2>
+                <p>Gerakan dinamis untuk melumasi sendi sebelum latihan.</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/f3zOrYCwquE?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="instructions">
+                Alternatif gerakan lutut aman: <b>Ankle Circles</b> (Putar pergelangan kaki), <b>Seated Knee Flutters</b> (Ayunkan kaki santai), dan <b>Seated Torso Twists</b> (Putar badan ke kiri-kanan).
+            </div>
+            <div class="task-list">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="warmup" onclick="toggleStrike(this)">
+                    <label for="warmup">Selesai Pemanasan</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">Tahap 2: Inti (Dumbbell 2 KG)</div>
+
+        <div class="card">
+            <div class="title-area">
+                <h2>Seated Bicep Curls</h2>
+                <p>Otot Lengan Depan • 3 Set x 10-12 Rep</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/FwApweWh6SY?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="instructions">Duduk tegak, angkat dumbbell ke arah bahu, peras otot, turunkan perlahan dalam 3 detik.</div>
+            <div class="task-list">
+                <div class="checkbox-wrapper"><input type="checkbox" id="bicep1" onclick="toggleStrike(this)"><label for="bicep1">Set 1 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="bicep2" onclick="toggleStrike(this)"><label for="bicep2">Set 2 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="bicep3" onclick="toggleStrike(this)"><label for="bicep3">Set 3 Selesai</label></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title-area">
+                <h2>Floor Dumbbell Chest Press</h2>
+                <p>Otot Dada & Mengikis Buncit • 3 Set x 12 Rep</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/T0Y3OBF1bNI?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="instructions">Berbaring di matras, lutut ditekuk. Dorong dumbbell ke langit-langit, turunkan perlahan sampai siku menyentuh lantai.</div>
+            <div class="task-list">
+                <div class="checkbox-wrapper"><input type="checkbox" id="chest1" onclick="toggleStrike(this)"><label for="chest1">Set 1 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="chest2" onclick="toggleStrike(this)"><label for="chest2">Set 2 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="chest3" onclick="toggleStrike(this)"><label for="chest3">Set 3 Selesai</label></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title-area">
+                <h2>Dead Bug (Tanpa Beban)</h2>
+                <p>Fokus Otot Perut Inti • 3 Set x 10 Rep/Sisi</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/o4GKiEoYClI?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="instructions">Berbaring, angkat tangan & lutut 90°. Luruskan tangan kanan dan kaki kiri bersamaan secara perlahan, lalu bergantian.</div>
+            <div class="task-list">
+                <div class="checkbox-wrapper"><input type="checkbox" id="bug1" onclick="toggleStrike(this)"><label for="bug1">Set 1 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="bug2" onclick="toggleStrike(this)"><label for="bug2">Set 2 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="bug3" onclick="toggleStrike(this)"><label for="bug3">Set 3 Selesai</label></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="title-area">
+                <h2>Terminal Knee Extension (TKE)</h2>
+                <p>Penguat Lutut Bebas Beban • 3 Set x 10 Rep</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/VuJZ6dqMf8M?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="instructions">Duduk, luruskan satu kaki sejajar lantai. Kencangkan paha depan sekuat mungkin, tahan 8 detik, turunkan.</div>
+            <div class="task-list">
+                <div class="checkbox-wrapper"><input type="checkbox" id="tke1" onclick="toggleStrike(this)"><label for="tke1">Set 1 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="tke2" onclick="toggleStrike(this)"><label for="tke2">Set 2 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="tke3" onclick="toggleStrike(this)"><label for="tke3">Set 3 Selesai</label></div>
+            </div>
+        </div>
+
+        <div class="section-title">Tahap 3: Pendinginan (5 Menit)</div>
+
+        <div class="card">
+            <div class="title-area">
+                <h2>5 Min Full Body Cool Down</h2>
+                <p>Tahan setiap posisi secara statis selama 30 detik.</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/R56k41NLIoI?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="instructions">
+                Atur napas panjang untuk melemaskan otot. Alternatif peregangan duduk: <b>Seated Hamstring Stretch</b>, <b>Chest Openers</b>, dan <b>Tricep Stretch</b>.
+            </div>
+            <div class="task-list">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="cooldown" onclick="toggleStrike(this)">
+                    <label for="cooldown">Selesai Pendinginan</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleStrike(checkbox) {
+            const wrapper = checkbox.parentElement;
+            if (checkbox.checked) {
+                wrapper.classList.add('checked');
+            } else {
+                wrapper.classList.remove('checked');
+            }
+        }
+    </script>
+</body>
+</html>
