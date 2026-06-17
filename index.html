@@ -40,6 +40,7 @@
             color: var(--gray);
             margin-top: 4px;
             font-weight: 500;
+            line-height: 1.4;
         }
         .container {
             padding: 20px;
@@ -47,7 +48,7 @@
             margin: 0 auto;
         }
         .section-title {
-            font-size: 11px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: var(--gray);
@@ -98,7 +99,7 @@
         }
         .checkbox-wrapper {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 12px;
             background: var(--bg);
             padding: 14px 16px;
@@ -111,60 +112,80 @@
             accent-color: var(--accent);
             border-radius: 6px;
             cursor: pointer;
+            margin-top: 2px;
         }
         .checkbox-wrapper label {
             font-size: 14px;
             font-weight: 500;
             cursor: pointer;
             width: 100%;
+            line-height: 1.5;
         }
         .checked {
             opacity: 0.5;
             text-decoration: line-through;
+        }
+        .schedule {
+            font-size: 13px;
+            color: var(--gray);
+            text-align: center;
+            margin-top: 32px;
+            padding: 20px;
+            background: var(--surface);
+            border-radius: 12px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Daily Routine</h1>
-        <div class="subtitle">Full Body & Knee Safe • 29 y/o Plan</div>
+        <h1>Full Workout Program</h1>
+        <div class="subtitle">Disempurnakan dengan dumbbell 2 kg. Dirancang khusus untuk usia 29 tahun agar aman dari bunyi lutut, menghilangkan perut buncit, dan membentuk lean muscle.</div>
     </header>
 
     <div class="container">
         
-        <div class="section-title">Tahap 1: Pemanasan (5 Menit)</div>
+        <div class="section-title">⏱️ TAHAP 1: PEMANASAN (5 Menit)</div>
+        <p style="font-size: 13px; color: var(--gray); margin-bottom: 16px;">Lakukan setiap gerakan secara mengalir dan perlahan (jangan ditahan diam) untuk melumasi sendi.</p>
         
         <div class="card">
-            <div class="title-area">
-                <h2>5 Min Full Body Warm Up</h2>
-                <p>Gerakan dinamis untuk melumasi sendi sebelum latihan.</p>
-            </div>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/f3zOrYCwquE?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="instructions">
-                Alternatif gerakan lutut aman: <b>Ankle Circles</b> (Putar pergelangan kaki), <b>Seated Knee Flutters</b> (Ayunkan kaki santai), dan <b>Seated Torso Twists</b> (Putar badan ke kiri-kanan).
-            </div>
             <div class="task-list">
                 <div class="checkbox-wrapper">
-                    <input type="checkbox" id="warmup" onclick="toggleStrike(this)">
-                    <label for="warmup">Selesai Pemanasan</label>
+                    <input type="checkbox" id="wu1" onclick="toggleStrike(this)">
+                    <label for="wu1"><b>Ankle Circles:</b> Duduk di kursi, angkat kaki kanan sedikit, putar pergelangan kaki searah jarum jam 15 dtk, ganti arah 15 dtk. Ulangi pada kaki kiri.</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="wu2" onclick="toggleStrike(this)">
+                    <label for="wu2"><b>Seated Knee Flutters:</b> Duduk di kursi, angkat kaki kanan hingga lurus perlahan, lalu turunkan. Lakukan bergantian kanan-kiri santai (1 menit).</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="wu3" onclick="toggleStrike(this)">
+                    <label for="wu3"><b>Seated Torso Twists:</b> Duduk tegak (panggul terkunci). Putar dada ke kanan perlahan, kembali ke tengah, lalu ke kiri (1 menit).</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="wu4" onclick="toggleStrike(this)">
+                    <label for="wu4"><b>Arm Circles:</b> Rentangkan tangan. Buat lingkaran kecil ke depan 30 dtk, lalu ke belakang 30 dtk.</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="wu5" onclick="toggleStrike(this)">
+                    <label for="wu5"><b>Seated Cat-Cow:</b> Duduk di tepi kursi. Lengkungkan punggung ke depan melihat ke atas (tarik napas), bulatkan punggung melihat perut (hembuskan) selama 1 menit.</label>
                 </div>
             </div>
         </div>
 
-        <div class="section-title">Tahap 2: Inti (Dumbbell 2 KG)</div>
+        <div class="section-title">💪 TAHAP 2: INTI DENGAN DUMBBELL 2 KG</div>
+        <p style="font-size: 13px; color: var(--gray); margin-bottom: 16px;">Istirahat 1 menit antar set. Tempo lambat dan terkontrol.</p>
 
+        <!-- A. Lengan -->
         <div class="card">
             <div class="title-area">
-                <h2>Seated Bicep Curls</h2>
-                <p>Otot Lengan Depan • 3 Set x 10-12 Rep</p>
+                <h2>A. Seated Bicep Curls</h2>
+                <p>3 Set x 10-12 Repetisi</p>
             </div>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/FwApweWh6SY?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="instructions">Duduk tegak, angkat dumbbell ke arah bahu, peras otot, turunkan perlahan dalam 3 detik.</div>
+            <div class="instructions">Duduk tegak menyandar. Pegang dumbbell 2 kg di kedua tangan lurus ke bawah. Tekuk siku, angkat ke bahu, peras otot, turunkan perlahan dalam 3 detik.</div>
             <div class="task-list">
                 <div class="checkbox-wrapper"><input type="checkbox" id="bicep1" onclick="toggleStrike(this)"><label for="bicep1">Set 1 Selesai</label></div>
                 <div class="checkbox-wrapper"><input type="checkbox" id="bicep2" onclick="toggleStrike(this)"><label for="bicep2">Set 2 Selesai</label></div>
@@ -174,13 +195,27 @@
 
         <div class="card">
             <div class="title-area">
-                <h2>Floor Dumbbell Chest Press</h2>
-                <p>Otot Dada & Mengikis Buncit • 3 Set x 12 Rep</p>
+                <h2>A. Seated Dumbbell Overhead Tricep Extension</h2>
+                <p>3 Set x 10 Repetisi</p>
+            </div>
+            <div class="instructions">Duduk tegak. Pegang satu dumbbell 2 kg dengan kedua tangan di belakang kepala (siku menghadap depan). Dorong dumbbell ke atas hingga lengan lurus, turunkan perlahan.</div>
+            <div class="task-list">
+                <div class="checkbox-wrapper"><input type="checkbox" id="tri1" onclick="toggleStrike(this)"><label for="tri1">Set 1 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="tri2" onclick="toggleStrike(this)"><label for="tri2">Set 2 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="tri3" onclick="toggleStrike(this)"><label for="tri3">Set 3 Selesai</label></div>
+            </div>
+        </div>
+
+        <!-- B. Badan & Perut -->
+        <div class="card">
+            <div class="title-area">
+                <h2>B. Floor Dumbbell Chest Press</h2>
+                <p>3 Set x 12 Repetisi</p>
             </div>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/T0Y3OBF1bNI?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="instructions">Berbaring di matras, lutut ditekuk. Dorong dumbbell ke langit-langit, turunkan perlahan sampai siku menyentuh lantai.</div>
+            <div class="instructions">Berbaring telentang, lutut ditekuk. Dorong dumbbell di samping dada lurus ke atas langit-langit, turunkan perlahan sampai siku menyentuh lantai.</div>
             <div class="task-list">
                 <div class="checkbox-wrapper"><input type="checkbox" id="chest1" onclick="toggleStrike(this)"><label for="chest1">Set 1 Selesai</label></div>
                 <div class="checkbox-wrapper"><input type="checkbox" id="chest2" onclick="toggleStrike(this)"><label for="chest2">Set 2 Selesai</label></div>
@@ -190,13 +225,13 @@
 
         <div class="card">
             <div class="title-area">
-                <h2>Dead Bug (Tanpa Beban)</h2>
-                <p>Fokus Otot Perut Inti • 3 Set x 10 Rep/Sisi</p>
+                <h2>B. Dead Bug (Tanpa Dumbbell)</h2>
+                <p>3 Set x 10 Repetisi per sisi</p>
             </div>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/o4GKiEoYClI?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="instructions">Berbaring, angkat tangan & lutut 90°. Luruskan tangan kanan dan kaki kiri bersamaan secara perlahan, lalu bergantian.</div>
+            <div class="instructions">Berbaring telentang, angkat tangan lurus ke atas dan lutut menggantung 90°. Perlahan luruskan tangan kanan ke belakang bersamaan meluruskan kaki kiri ke depan. Kembali, ganti sisi.</div>
             <div class="task-list">
                 <div class="checkbox-wrapper"><input type="checkbox" id="bug1" onclick="toggleStrike(this)"><label for="bug1">Set 1 Selesai</label></div>
                 <div class="checkbox-wrapper"><input type="checkbox" id="bug2" onclick="toggleStrike(this)"><label for="bug2">Set 2 Selesai</label></div>
@@ -206,13 +241,27 @@
 
         <div class="card">
             <div class="title-area">
-                <h2>Terminal Knee Extension (TKE)</h2>
-                <p>Penguat Lutut Bebas Beban • 3 Set x 10 Rep</p>
+                <h2>B. Weighted Seated Russian Twists</h2>
+                <p>3 Set x 12 Putaran</p>
+            </div>
+            <div class="instructions">Duduk di lantai, paha rileks lurus ke depan. Condongkan badan sedikit ke belakang. Pegang satu dumbbell 2 kg di depan dada. Putar dada dan dumbbell ke kanan dan kiri bergantian.</div>
+            <div class="task-list">
+                <div class="checkbox-wrapper"><input type="checkbox" id="twist1" onclick="toggleStrike(this)"><label for="twist1">Set 1 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="twist2" onclick="toggleStrike(this)"><label for="twist2">Set 2 Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="twist3" onclick="toggleStrike(this)"><label for="twist3">Set 3 Selesai</label></div>
+            </div>
+        </div>
+
+        <!-- C. Penguat Lutut -->
+        <div class="card">
+            <div class="title-area">
+                <h2>C. Terminal Knee Extension (TKE Duduk)</h2>
+                <p>Tanpa Dumbbell • 3 Set x 10 Repetisi</p>
             </div>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/VuJZ6dqMf8M?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="instructions">Duduk, luruskan satu kaki sejajar lantai. Kencangkan paha depan sekuat mungkin, tahan 8 detik, turunkan.</div>
+            <div class="instructions">Duduk di kursi, luruskan kaki kanan ke depan sejajar lantai. Kencangkan otot paha depan sekuat mungkin, tahan selama 8 detik per repetisi, lalu turunkan perlahan.</div>
             <div class="task-list">
                 <div class="checkbox-wrapper"><input type="checkbox" id="tke1" onclick="toggleStrike(this)"><label for="tke1">Set 1 Selesai</label></div>
                 <div class="checkbox-wrapper"><input type="checkbox" id="tke2" onclick="toggleStrike(this)"><label for="tke2">Set 2 Selesai</label></div>
@@ -220,25 +269,44 @@
             </div>
         </div>
 
-        <div class="section-title">Tahap 3: Pendinginan (5 Menit)</div>
-
         <div class="card">
             <div class="title-area">
-                <h2>5 Min Full Body Cool Down</h2>
-                <p>Tahan setiap posisi secara statis selama 30 detik.</p>
+                <h2>C. Kencang Paha Telentang (Quad Sets)</h2>
+                <p>15 Kali Tahan per kaki</p>
             </div>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/R56k41NLIoI?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="instructions">Berbaring telentang, letakkan gulungan handuk di bawah lutut. Tekan lutut ke bawah menjepit handuk dengan mengencangkan otot paha selama 5-8 detik, lalu rileks.</div>
+            <div class="task-list">
+                <div class="checkbox-wrapper"><input type="checkbox" id="quad1" onclick="toggleStrike(this)"><label for="quad1">Kaki Kanan Selesai</label></div>
+                <div class="checkbox-wrapper"><input type="checkbox" id="quad2" onclick="toggleStrike(this)"><label for="quad2">Kaki Kiri Selesai</label></div>
             </div>
-            <div class="instructions">
-                Atur napas panjang untuk melemaskan otot. Alternatif peregangan duduk: <b>Seated Hamstring Stretch</b>, <b>Chest Openers</b>, dan <b>Tricep Stretch</b>.
-            </div>
+        </div>
+
+        <div class="section-title">⏱️ TAHAP 3: PENDINGINAN (5 Menit)</div>
+        <p style="font-size: 13px; color: var(--gray); margin-bottom: 16px;">Tahan setiap posisi secara statis (diam) selama 30 detik sambil mengatur napas panjang.</p>
+
+        <div class="card">
             <div class="task-list">
                 <div class="checkbox-wrapper">
-                    <input type="checkbox" id="cooldown" onclick="toggleStrike(this)">
-                    <label for="cooldown">Selesai Pendinginan</label>
+                    <input type="checkbox" id="cd1" onclick="toggleStrike(this)">
+                    <label for="cd1"><b>Seated Hamstring Stretch:</b> Duduk di tepi kursi, luruskan kaki ke depan. Condongkan dada ke depan sampai paha belakang tertarik. Tahan 30 dtk, ganti kaki.</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="cd2" onclick="toggleStrike(this)">
+                    <label for="cd2"><b>Chest Openers:</b> Duduk tegak, satukan tangan di belakang punggung. Busungkan dada dan tarik bahu ke belakang. Tahan 30-45 dtk.</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="cd3" onclick="toggleStrike(this)">
+                    <label for="cd3"><b>Seated Overhead Tricep Stretch:</b> Angkat tangan kanan ke atas, tekuk siku sentuh punggung atas. Dorong siku kanan ke belakang pakai tangan kiri. Tahan 30 dtk, ganti sisi.</label>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" id="cd4" onclick="toggleStrike(this)">
+                    <label for="cd4"><b>Lying Quad Stretch:</b> Tengkurap/miring. Lingkarkan handuk di pergelangan kaki. Tarik tumit mendekati bokong perlahan pakai handuk. Tahan 30 dtk.</label>
                 </div>
             </div>
+        </div>
+
+        <div class="schedule">
+            📅 <b>Jadwal:</b> 3x Seminggu (Senin, Rabu, Jumat). Jeda 1 hari istirahat.
         </div>
 
     </div>
